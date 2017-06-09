@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2">
+  <class name="Development.Dal.Common.Models.IncidentsRescueMappingsDao,Development.Dal" table="IncidentsRescueMappings" lazy="true">
+    <id name="Id" column="ID" type="int">
+      <generator class="native"/>
+    </id>
+    <property type="int"  name="IncidentID" column="IncidentID"/>
+    <property type="int" name="RescuerID" column="RescuerID"/>
+    <property type="bool"  name="NeededAssistance" column="NeededAssistance"/>
+    <property type="bool" name="IsMissionComplete" column="IsMissionComplete"/>
+    <property type="DateTime"  name="DateCreated" column="DateCreated"/>
+  </class>
+</hibernate-mapping>

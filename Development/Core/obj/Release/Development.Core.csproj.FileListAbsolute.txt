@@ -1,0 +1,15 @@
+D:\vini-personal-files\Andriod\TotalStayPOC\Development\Core\bin\Release\Development.Core.dll.config
+D:\vini-personal-files\Andriod\TotalStayPOC\Development\Core\bin\Release\Development.Core.dll
+D:\vini-personal-files\Andriod\TotalStayPOC\Development\Core\bin\Release\Development.Core.pdb
+D:\vini-personal-files\Andriod\TotalStayPOC\Development\Core\bin\Release\Development.Dal.dll
+D:\vini-personal-files\Andriod\TotalStayPOC\Development\Core\bin\Release\ICSharpCode.SharpZipLib.dll
+D:\vini-personal-files\Andriod\TotalStayPOC\Development\Core\bin\Release\log4net.dll
+D:\vini-personal-files\Andriod\TotalStayPOC\Development\Core\bin\Release\Newtonsoft.Json.dll
+D:\vini-personal-files\Andriod\TotalStayPOC\Development\Core\bin\Release\NHibernate.dll
+D:\vini-personal-files\Andriod\TotalStayPOC\Development\Core\bin\Release\Development.Dal.pdb
+D:\vini-personal-files\Andriod\TotalStayPOC\Development\Core\bin\Release\log4net.xml
+D:\vini-personal-files\Andriod\TotalStayPOC\Development\Core\bin\Release\Newtonsoft.Json.xml
+D:\vini-personal-files\Andriod\TotalStayPOC\Development\Core\bin\Release\NHibernate.xml
+D:\vini-personal-files\Andriod\TotalStayPOC\Development\Core\obj\Release\Development.Core.csprojResolveAssemblyReference.cache
+D:\vini-personal-files\Andriod\TotalStayPOC\Development\Core\obj\Release\Development.Core.dll
+D:\vini-personal-files\Andriod\TotalStayPOC\Development\Core\obj\Release\Development.Core.pdb
