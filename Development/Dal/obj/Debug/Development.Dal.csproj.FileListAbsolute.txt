@@ -22,5 +22,6 @@ C:\RescYou\RescueWebApi\Development\Dal\bin\Debug\log4net.dll
 C:\RescYou\RescueWebApi\Development\Dal\bin\Debug\NHibernate.dll
 C:\RescYou\RescueWebApi\Development\Dal\bin\Debug\log4net.xml
 C:\RescYou\RescueWebApi\Development\Dal\bin\Debug\NHibernate.xml
+C:\RescYou\RescueWebApi\Development\Dal\obj\Debug\Development.Dal.csprojResolveAssemblyReference.cache
 C:\RescYou\RescueWebApi\Development\Dal\obj\Debug\Development.Dal.dll
 C:\RescYou\RescueWebApi\Development\Dal\obj\Debug\Development.Dal.pdb

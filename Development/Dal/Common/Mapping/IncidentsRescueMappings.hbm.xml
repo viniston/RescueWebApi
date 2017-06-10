@@ -9,5 +9,6 @@
     <property type="bool"  name="NeededAssistance" column="NeededAssistance"/>
     <property type="bool" name="IsMissionComplete" column="IsMissionComplete"/>
     <property type="DateTime"  name="DateCreated" column="DateCreated"/>
+    <property type="bool"  name="IsRead" column="IsRead"/>
   </class>
 </hibernate-mapping>

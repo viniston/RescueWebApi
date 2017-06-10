@@ -121,5 +121,28 @@ namespace Development.Web.Controllers
             return _result;
         }
 
+        [HttpGet]
+        [Route("GetIncidentDetails/{incidentID}/{rescuerID}")]
+        public ServiceResponse GetIncidentDetails(int incidentID, int rescuerID)
+        {
+            _result = new ServiceResponse();
+            try
+            {
+
+                Guid systemSession = DevelopmentManagerFactory.GetSystemSession();
+                IDevelopmentManager developmentManager = DevelopmentManagerFactory.GetDevelopmentManager(systemSession);
+                _result.StatusCode = (int)HttpStatusCode.OK;
+                
+                _result.Response = developmentManager.CommonManager.GetIncidentDetails(incidentID, rescuerID);
+
+            }
+            catch
+            {
+                _result.StatusCode = (int)HttpStatusCode.MethodNotAllowed;
+                _result.Response = null;
+            }
+            return _result;
+        }
+
     }
 }
