@@ -16,3 +16,11 @@ D:\vini-personal-files\Andriod\TotalStayPOC\Development\Dal\bin\Debug\NHibernate
 D:\vini-personal-files\Andriod\TotalStayPOC\Development\Dal\obj\Debug\Development.Dal.dll
 D:\vini-personal-files\Andriod\TotalStayPOC\Development\Dal\obj\Debug\Development.Dal.pdb
 D:\vini-personal-files\Andriod\TotalStayPOC\Development\Dal\obj\Debug\Development.Dal.csprojResolveAssemblyReference.cache
+C:\RescYou\RescueWebApi\Development\Dal\bin\Debug\Development.Dal.dll
+C:\RescYou\RescueWebApi\Development\Dal\bin\Debug\Development.Dal.pdb
+C:\RescYou\RescueWebApi\Development\Dal\bin\Debug\log4net.dll
+C:\RescYou\RescueWebApi\Development\Dal\bin\Debug\NHibernate.dll
+C:\RescYou\RescueWebApi\Development\Dal\bin\Debug\log4net.xml
+C:\RescYou\RescueWebApi\Development\Dal\bin\Debug\NHibernate.xml
+C:\RescYou\RescueWebApi\Development\Dal\obj\Debug\Development.Dal.dll
+C:\RescYou\RescueWebApi\Development\Dal\obj\Debug\Development.Dal.pdb

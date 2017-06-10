@@ -16,6 +16,10 @@ namespace Development.Core.Core.Interface.Managers
 
         int SaveIncident(IncidentsDao request);
 
+        bool SaveIncidentsRescueMappings(IncidentsRescueMappingsDao request);
+
+        int SaveUserMaster(UserMasterDao request);
+
         #endregion
 
     }

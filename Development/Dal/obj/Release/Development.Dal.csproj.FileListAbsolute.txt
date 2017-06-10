@@ -7,3 +7,12 @@ D:\vini-personal-files\Andriod\TotalStayPOC\Development\Dal\bin\Release\NHiberna
 D:\vini-personal-files\Andriod\TotalStayPOC\Development\Dal\obj\Release\Development.Dal.csprojResolveAssemblyReference.cache
 D:\vini-personal-files\Andriod\TotalStayPOC\Development\Dal\obj\Release\Development.Dal.dll
 D:\vini-personal-files\Andriod\TotalStayPOC\Development\Dal\obj\Release\Development.Dal.pdb
+C:\RescYou\RescueWebApi\Development\Dal\bin\Release\Development.Dal.dll
+C:\RescYou\RescueWebApi\Development\Dal\bin\Release\Development.Dal.pdb
+C:\RescYou\RescueWebApi\Development\Dal\bin\Release\log4net.dll
+C:\RescYou\RescueWebApi\Development\Dal\bin\Release\NHibernate.dll
+C:\RescYou\RescueWebApi\Development\Dal\bin\Release\log4net.xml
+C:\RescYou\RescueWebApi\Development\Dal\bin\Release\NHibernate.xml
+C:\RescYou\RescueWebApi\Development\Dal\obj\Release\Development.Dal.csprojResolveAssemblyReference.cache
+C:\RescYou\RescueWebApi\Development\Dal\obj\Release\Development.Dal.dll
+C:\RescYou\RescueWebApi\Development\Dal\obj\Release\Development.Dal.pdb

@@ -35,6 +35,17 @@ namespace Development.Core.Core.Managers.Proxy
         {
             return CommonManager.Instance.SaveIncident(this, request);
         }
+
+        public bool SaveIncidentsRescueMappings(IncidentsRescueMappingsDao request)
+        {
+            return CommonManager.Instance.SaveIncidentsRescueMappings(this, request.IncidentID);
+        }
+
+        public int SaveUserMaster(UserMasterDao request)
+        {
+            return CommonManager.Instance.SaveUserMaster(this, request);
+        }
+
         #endregion
 
 

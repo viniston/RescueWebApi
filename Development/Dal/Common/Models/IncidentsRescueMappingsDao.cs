@@ -15,7 +15,7 @@ namespace Development.Dal.Common.Models
         public virtual bool IsMissionComplete { get; set; }
         public virtual bool NeededAssistance { get; set; }
         public virtual DateTime DateCreated { get; set; }
-
+        public virtual bool IsRead { get; set; }
     }
 
 }

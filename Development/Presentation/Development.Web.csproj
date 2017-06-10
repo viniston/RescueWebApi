@@ -14,7 +14,7 @@
     <RootNamespace>Development.Web</RootNamespace>
     <AssemblyName>Development.Web</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
-    <UseIISExpress>true</UseIISExpress>
+    <UseIISExpress>false</UseIISExpress>
     <IISExpressSSLPort />
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
@@ -234,8 +234,10 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\IncidentsRescueMappings.cs" />
     <Compile Include="Models\Reading.cs" />
     <Compile Include="Models\IncidentRequestDto.cs" />
+    <Compile Include="Models\UserMasterDto.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -255,6 +257,7 @@
     </Content>
     <None Include="Properties\PublishProfiles\DevelopmentBase.pubxml" />
     <None Include="Properties\PublishProfiles\GALETEST.pubxml" />
+    <None Include="Properties\PublishProfiles\Rescyou.pubxml" />
     <None Include="Properties\PublishProfiles\RescYouApp.pubxml" />
     <None Include="Properties\PublishProfiles\SecretCms.pubxml" />
     <None Include="Web.Debug.config">
@@ -296,7 +299,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>54322</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost/RescYouWebAPI/</IISUrl>
+          <IISUrl>http://localhost/testrescue</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>
