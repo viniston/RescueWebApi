@@ -21,7 +21,7 @@ namespace Development.Web.Controllers
 
         [HttpPost]
         [Route("Incident")]
-        public ServiceResponse SearchAvailabilty(IncidentRequestDto dto)
+        public ServiceResponse Incident(IncidentRequestDto dto)
         {
             _result = new ServiceResponse();
             try
@@ -52,5 +52,74 @@ namespace Development.Web.Controllers
             }
             return _result;
         }
+
+        [HttpPost]
+        [Route("IncidentsRescueMappings")]
+        public ServiceResponse IncidentsRescueMappings(IncidentsRescueMappingsDto dto)
+        {
+            _result = new ServiceResponse();
+            try
+            {
+
+                Guid systemSession = DevelopmentManagerFactory.GetSystemSession();
+                IDevelopmentManager developmentManager = DevelopmentManagerFactory.GetDevelopmentManager(systemSession);
+                _result.StatusCode = (int)HttpStatusCode.OK;
+                var dao = new IncidentsRescueMappingsDao
+                {
+                    IncidentID = dto.IncidentID,
+                    RescuerID = dto.RescuerID,
+                    IsMissionComplete = dto.IsMissionComplete,
+                    NeededAssistance = dto.NeededAssistance,
+                    DateCreated = DateTime.Now.Date,
+                    IsRead = false
+                };
+
+                _result.Response = developmentManager.CommonManager.SaveIncidentsRescueMappings(dao);
+
+            }
+            catch
+            {
+                _result.StatusCode = (int)HttpStatusCode.MethodNotAllowed;
+                _result.Response = null;
+            }
+            return _result;
+        }
+
+        [HttpPost]
+        [Route("UserMaster")]
+        public ServiceResponse UserMaster(UserMasterDto dto)
+        {
+            _result = new ServiceResponse();
+            try
+            {
+
+                Guid systemSession = DevelopmentManagerFactory.GetSystemSession();
+                IDevelopmentManager developmentManager = DevelopmentManagerFactory.GetDevelopmentManager(systemSession);
+                _result.StatusCode = (int)HttpStatusCode.OK;
+                var dao = new UserMasterDao
+                {
+                    UserName = dto.UserName,
+                    MobileNumber = dto.MobileNumber,
+                    Address = dto.Address,
+                    Street = dto.Street,
+                    City = dto.City,
+                    State = dto.State,
+                    Category = dto.Category,
+                    InterestedIn = dto.InterestedIn,
+                    RadiusOnWhereCanOperate = dto.RadiusOnWhereCanOperate,
+                    AreaWhereCanOperate = dto.AreaWhereCanOperate
+                };
+
+                _result.Response = developmentManager.CommonManager.SaveUserMaster(dao);
+
+            }
+            catch
+            {
+                _result.StatusCode = (int)HttpStatusCode.MethodNotAllowed;
+                _result.Response = null;
+            }
+            return _result;
+        }
+
     }
 }

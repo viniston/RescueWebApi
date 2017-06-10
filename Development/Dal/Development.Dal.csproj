@@ -65,6 +65,7 @@
     <Compile Include="Common\CommonRepository.cs" />
     <Compile Include="Common\Models\IncidentsRescueMappingsDao.cs" />
     <Compile Include="Common\Models\IncidentsDao.cs" />
+    <Compile Include="Common\Models\UserMasterDao.cs" />
     <Compile Include="Common\StationCode.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Error\Model\ErrorDao.cs" />
@@ -73,6 +74,7 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Common\Mapping\UserMaster.hbm.xml" />
     <Content Include="README.txt" />
     <EmbeddedResource Include="Common\Mapping\Incidents.hbm.xml">
       <SubType>Designer</SubType>

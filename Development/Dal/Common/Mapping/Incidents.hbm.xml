@@ -9,5 +9,8 @@
     <property type="int"  name="ReporterID" column="ReporterID"/>
     <property type="bool" name="VictimCategory" column="VictimCategory"/>
     <property type="DateTime"  name="DateCreated" column="DateCreated"/>
+    <property type="string"  name="Summary" column="Summary"/>
+    <property type="bool"  name="IsRescued" column="IsRescued"/>
+    <property type="int"  name="PriorityLevel" column="PriorityLevel"/>
   </class>
 </hibernate-mapping>

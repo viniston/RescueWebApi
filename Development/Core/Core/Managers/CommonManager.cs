@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
+using System.Linq;
 using System.Text;
 using Development.Core.Core.Managers.Proxy;
 using Development.Core.Interface;
@@ -108,6 +109,7 @@ namespace Development.Core.Core.Managers
                 {
                     tx.PersistenceManager.UserRepository.Save(request);
                     tx.Commit();
+                    SaveIncidentsRescueMappings(proxy, request.Id);
                     return request.Id;
                 }
             }
@@ -118,9 +120,66 @@ namespace Development.Core.Core.Managers
             }
         }
 
+        //
+
+
         #endregion
 
+        public bool SaveIncidentsRescueMappings(CommonManagerProxy proxy, int incidentId)
+        {
+            try
+            {
+                var list = new List<IncidentsRescueMappingsDao>();
+                using (ITransaction tx = proxy.DevelopmentManager.GetTransaction())
+                {
+                    var listOfRescuer =
+                       tx.PersistenceManager.UserRepository.GetAll<UserMasterDao>().Where(u => u.Category == 1);
+                    foreach (var person in listOfRescuer)
+                    {
+                        var request = new IncidentsRescueMappingsDao
+                        {
+                            IncidentID = incidentId,
+                            IsMissionComplete = false,
+                            IsRead = false,
+                            NeededAssistance = false,
+                            RescuerID = person.Id,
+                            DateCreated = DateTime.Now
+                        };
+                        list.Add(request);
+                        tx.PersistenceManager.UserRepository.Save(request);
+                    }
+                    //if (list.Count > 0)
+                    //{
+                    //    tx.PersistenceManager.UserRepository.Save(list);
+                    //}
+                    tx.Commit();
+                    return true;
+                }
+            }
+            catch (Exception ex)
+            {
+                LogError(proxy, ex);
+                return false;
+            }
+        }
 
+        public int SaveUserMaster(CommonManagerProxy proxy, UserMasterDao request)
+        {
+            try
+            {
+                using (ITransaction tx = proxy.DevelopmentManager.GetTransaction())
+                {
+                    tx.PersistenceManager.UserRepository.Save(request);
+                    tx.Commit();
+                    return request.Id;
+                }
+            }
+            catch (Exception ex)
+            {
+                LogError(proxy, ex);
+                return 0;
+            }
+        }
 
     }
 }
