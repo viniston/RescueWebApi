@@ -209,7 +209,7 @@ namespace Development.Core.Core.Managers
         {
             try
             {
-                int duration = -5;
+                int duration = -100;
                 var updatedDate = request.CreatedDate.AddDays(duration);
                 using (ITransaction tx = proxy.DevelopmentManager.GetTransaction())
                 {
