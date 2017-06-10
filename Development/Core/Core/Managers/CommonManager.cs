@@ -205,18 +205,18 @@ namespace Development.Core.Core.Managers
             }
         }
 
-        public List<IncidentsRescueMappingsDao> GetNotifications(CommonManagerProxy proxy, DateTime requiredDate)
+        public List<IncidentsDao> GetNotifications(CommonManagerProxy proxy, NotificationInputDao request)
         {
             try
             {
                 int duration = -5;
-                var updatedDate = requiredDate.AddDays(duration);
+                var updatedDate = request.CreatedDate.AddDays(duration);
                 using (ITransaction tx = proxy.DevelopmentManager.GetTransaction())
                 {
                     var getNotifications =
                         tx.PersistenceManager.UserRepository
-                            .GetAll<IncidentsRescueMappingsDao>()
-                            .Where(i => i.DateCreated >= updatedDate && i.IsRead == false).ToList();
+                            .GetAll<IncidentsDao>()
+                            .Where(i => i.DateCreated >= updatedDate && i.ReporterID != request.ReporterID && i.IsRescued == request.IsRescued).ToList();
                     return getNotifications;
                 }
             }

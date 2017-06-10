@@ -52,9 +52,9 @@ namespace Development.Core.Core.Managers.Proxy
             return CommonManager.Instance.GetIncidentDetails(this, incidentID, rescuerID);
         }
 
-        public List<IncidentsRescueMappingsDao> GetNotifications(IncidentsRescueMappingsDao request)
+        public List<IncidentsDao> GetNotifications(NotificationInputDao request)
         {
-            return CommonManager.Instance.GetNotifications(this, request.DateCreated);
+            return CommonManager.Instance.GetNotifications(this, request);
         }
 
         #endregion

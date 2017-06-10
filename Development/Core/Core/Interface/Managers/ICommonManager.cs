@@ -23,7 +23,7 @@ namespace Development.Core.Core.Interface.Managers
 
         IncidentsDao GetIncidentDetails(int incidentID, int rescuerID);
 
-        List<IncidentsRescueMappingsDao> GetNotifications(IncidentsRescueMappingsDao request);
+        List<IncidentsDao> GetNotifications(NotificationInputDao request);
 
         #endregion
 

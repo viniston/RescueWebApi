@@ -65,6 +65,7 @@
     <Compile Include="Common\CommonRepository.cs" />
     <Compile Include="Common\Models\IncidentsRescueMappingsDao.cs" />
     <Compile Include="Common\Models\IncidentsDao.cs" />
+    <Compile Include="Common\Models\NotificationInputDao.cs" />
     <Compile Include="Common\Models\UserMasterDao.cs" />
     <Compile Include="Common\StationCode.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -146,7 +146,7 @@ namespace Development.Web.Controllers
 
         [HttpPost]
         [Route("GetNotifications")]
-        public ServiceResponse GetNotifications(IncidentsRescueMappingsDto dto)
+        public ServiceResponse GetNotifications(NotificationInputDto dto)
         {
             _result = new ServiceResponse();
             try
@@ -155,10 +155,11 @@ namespace Development.Web.Controllers
                 Guid systemSession = DevelopmentManagerFactory.GetSystemSession();
                 IDevelopmentManager developmentManager = DevelopmentManagerFactory.GetDevelopmentManager(systemSession);
                 _result.StatusCode = (int)HttpStatusCode.OK;
-                var dao = new IncidentsRescueMappingsDao
+                var dao = new NotificationInputDao()
                 {
-                    DateCreated = DateTime.Now.Date,
-                    IsRead = false
+                    CreatedDate = DateTime.Now.Date,
+                    ReporterID = dto.ReporterID,
+                    IsRescued = false
                 };
                 _result.Response = developmentManager.CommonManager.GetNotifications(dao);
 
