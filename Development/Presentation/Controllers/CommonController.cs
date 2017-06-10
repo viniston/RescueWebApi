@@ -144,5 +144,33 @@ namespace Development.Web.Controllers
             return _result;
         }
 
+        [HttpPost]
+        [Route("GetNotifications")]
+        public ServiceResponse GetNotifications(NotificationInputDto dto)
+        {
+            _result = new ServiceResponse();
+            try
+            {
+
+                Guid systemSession = DevelopmentManagerFactory.GetSystemSession();
+                IDevelopmentManager developmentManager = DevelopmentManagerFactory.GetDevelopmentManager(systemSession);
+                _result.StatusCode = (int)HttpStatusCode.OK;
+                var dao = new NotificationInputDao()
+                {
+                    CreatedDate = DateTime.Now.Date,
+                    ReporterID = dto.ReporterID,
+                    IsRescued = false
+                };
+                _result.Response = developmentManager.CommonManager.GetNotifications(dao);
+
+            }
+            catch
+            {
+                _result.StatusCode = (int)HttpStatusCode.MethodNotAllowed;
+                _result.Response = null;
+            }
+            return _result;
+        }
+
     }
 }

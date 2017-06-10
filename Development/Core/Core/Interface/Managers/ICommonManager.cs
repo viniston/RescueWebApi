@@ -1,4 +1,5 @@
-﻿using Development.Dal.Common.Models;
+﻿using System.Collections.Generic;
+using Development.Dal.Common.Models;
 
 namespace Development.Core.Core.Interface.Managers
 {
@@ -21,6 +22,8 @@ namespace Development.Core.Core.Interface.Managers
         int SaveUserMaster(UserMasterDao request);
 
         IncidentsDao GetIncidentDetails(int incidentID, int rescuerID);
+
+        List<IncidentsDao> GetNotifications(NotificationInputDao request);
 
         #endregion
 

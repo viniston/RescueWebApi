@@ -205,6 +205,28 @@ namespace Development.Core.Core.Managers
             }
         }
 
+        public List<IncidentsDao> GetNotifications(CommonManagerProxy proxy, NotificationInputDao request)
+        {
+            try
+            {
+                int duration = -100;
+                var updatedDate = request.CreatedDate.AddDays(duration);
+                using (ITransaction tx = proxy.DevelopmentManager.GetTransaction())
+                {
+                    var getNotifications =
+                        tx.PersistenceManager.UserRepository
+                            .GetAll<IncidentsDao>()
+                            .Where(i => i.DateCreated >= updatedDate && i.ReporterID != request.ReporterID && i.IsRescued == request.IsRescued).ToList();
+                    return getNotifications;
+                }
+            }
+            catch (Exception ex)
+            {
+                LogError(proxy, ex);
+                return null;
+            }
+        }
+
     }
 }
 

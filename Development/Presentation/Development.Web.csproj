@@ -235,6 +235,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\IncidentsRescueMappings.cs" />
+    <Compile Include="Models\NotificationInputDto.cs" />
     <Compile Include="Models\Reading.cs" />
     <Compile Include="Models\IncidentRequestDto.cs" />
     <Compile Include="Models\UserMasterDto.cs" />
