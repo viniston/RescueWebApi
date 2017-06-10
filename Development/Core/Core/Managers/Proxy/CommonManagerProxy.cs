@@ -1,4 +1,5 @@
-﻿using Development.Core.Core.Interface.Managers;
+﻿using System.Collections.Generic;
+using Development.Core.Core.Interface.Managers;
 using Development.Core.Interface;
 using Development.Dal.Common.Models;
 
@@ -49,6 +50,11 @@ namespace Development.Core.Core.Managers.Proxy
         public IncidentsDao GetIncidentDetails(int incidentID, int rescuerID)
         {
             return CommonManager.Instance.GetIncidentDetails(this, incidentID, rescuerID);
+        }
+
+        public List<IncidentsRescueMappingsDao> GetNotifications(IncidentsRescueMappingsDao request)
+        {
+            return CommonManager.Instance.GetNotifications(this, request.DateCreated);
         }
 
         #endregion
