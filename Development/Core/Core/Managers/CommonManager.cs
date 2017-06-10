@@ -181,6 +181,30 @@ namespace Development.Core.Core.Managers
             }
         }
 
+        public IncidentsDao GetIncidentDetails(CommonManagerProxy proxy, int incidentID, int rescuerID)
+        {
+            try
+            {
+                using (ITransaction tx = proxy.DevelopmentManager.GetTransaction())
+                {
+                    var incident = tx.PersistenceManager.UserRepository.Get<IncidentsDao>(incidentID);
+                    var updateUser =
+                        tx.PersistenceManager.UserRepository
+                            .GetAll<IncidentsRescueMappingsDao>()
+                            .First(i => i.RescuerID == rescuerID);
+                    updateUser.IsRead = true;
+                    tx.PersistenceManager.UserRepository.Save<IncidentsRescueMappingsDao>(updateUser);
+                    tx.Commit();
+                    return incident;
+                }
+            }
+            catch (Exception ex)
+            {
+                LogError(proxy, ex);
+                return null;
+            }
+        }
+
     }
 }
 

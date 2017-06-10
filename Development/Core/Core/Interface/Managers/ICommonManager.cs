@@ -20,6 +20,8 @@ namespace Development.Core.Core.Interface.Managers
 
         int SaveUserMaster(UserMasterDao request);
 
+        IncidentsDao GetIncidentDetails(int incidentID, int rescuerID);
+
         #endregion
 
     }
